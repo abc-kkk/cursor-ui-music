@@ -1,0 +1,160 @@
+/* 
+ * 音乐App共享样式 
+ */
+
+/* 隐藏滚动条但保留滚动功能 */
+.hide-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.hide-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+/* iOS状态栏 */
+.status-bar {
+    height: 44px;
+    background-color: rgba(0, 0, 0, 0.05);
+    color: #000;
+    padding: 0 16px;
+    font-size: 14px;
+    font-weight: 600;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+}
+
+.dark .status-bar {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+}
+
+/* 底部导航栏 */
+.bottom-nav {
+    height: 84px; /* 包含安全区域 */
+    background-color: rgba(255, 255, 255, 0.95);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 40;
+}
+
+.dark .bottom-nav {
+    background-color: rgba(30, 30, 30, 0.95);
+    border-top-color: rgba(255, 255, 255, 0.1);
+}
+
+/* 迷你播放器 */
+.mini-player {
+    height: 64px;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    position: fixed;
+    bottom: 84px;
+    width: 100%;
+    z-index: 30;
+}
+
+.dark .mini-player {
+    background-color: rgba(30, 30, 30, 0.95);
+    border-top-color: rgba(255, 255, 255, 0.1);
+}
+
+/* 内容区 - 考虑顶部状态栏和底部导航 */
+.content-area {
+    padding-top: 10px;
+    padding-bottom: 148px; /* 底部导航 + 迷你播放器 */
+    overflow-y: scroll;
+    height: calc(100vh - 44px);
+}
+
+/* 音乐卡片 */
+.music-card {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+.music-card:active {
+    transform: scale(0.97);
+}
+
+/* 主题颜色 */
+:root {
+    --primary-color: #5e35b1; /* 深紫色 */
+    --secondary-color: #4527a0;
+    --accent-color: #03dac6; /* 青色强调 */
+    --text-primary: #212121;
+    --text-secondary: #757575;
+    --background-color: #fafafa;
+}
+
+.dark {
+    --primary-color: #7c4dff;
+    --secondary-color: #651fff;
+    --accent-color: #00e5ff;
+    --text-primary: #ffffff;
+    --text-secondary: #b0b0b0;
+    --background-color: #121212;
+}
+
+/* 自定义动画 */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.animate-pulse {
+    animation: pulse 2s infinite;
+}
+
+/* 进度条样式 */
+.progress-bar {
+    height: 4px;
+    background-color: rgba(94, 53, 177, 0.3);
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.progress-bar .progress {
+    height: 100%;
+    background-color: var(--primary-color);
+    border-radius: 2px;
+}
+
+/* 波形动画 */
+.wave-animation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    height: 16px;
+}
+
+.wave-animation .bar {
+    width: 2px;
+    background-color: var(--primary-color);
+    height: 100%;
+    animation: wave 1.2s ease-in-out infinite;
+}
+
+.wave-animation .bar:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.wave-animation .bar:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+.wave-animation .bar:nth-child(4) {
+    animation-delay: 0.6s;
+}
+
+@keyframes wave {
+    0%, 100% { height: 30%; }
+    50% { height: 100%; }
+} 

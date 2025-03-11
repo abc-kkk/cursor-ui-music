@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>首页 - 音乐App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-white text-gray-900">
+    <!-- 状态栏 -->
+    <div class="status-bar flex justify-between items-center">
+        <span class="status-time">9:41</span>
+        <div class="status-icons flex space-x-1">
+            <i class="fas fa-signal"></i>
+            <i class="fas fa-wifi"></i>
+            <i class="fas fa-battery-full"></i>
+        </div>
+    </div>
+
+    <!-- 内容区域 -->
+    <div class="content-area hide-scrollbar px-4">
+        <!-- 顶部欢迎语和头像 -->
+        <div class="flex justify-between items-center mt-2 mb-6">
+            <div>
+                <h2 class="text-xl font-bold">你好，小明</h2>
+                <p class="text-gray-500 text-sm">享受美妙的音乐时光</p>
+            </div>
+            <div class="w-10 h-10 rounded-full bg-purple-600 flex items-center justify-center text-white">
+                <span>小明</span>
+            </div>
+        </div>
+
+        <!-- 搜索框 -->
+        <div class="relative mb-6">
+            <input type="text" placeholder="搜索歌曲、艺术家或专辑" class="w-full py-2.5 pl-10 pr-4 bg-gray-100 rounded-full text-sm focus:outline-none">
+            <i class="fas fa-search absolute left-4 top-3 text-gray-400"></i>
+        </div>
+
+        <!-- 为你推荐 -->
+        <div class="mb-8">
+            <h3 class="text-lg font-bold mb-4">为你推荐</h3>
+            <div class="flex overflow-x-auto hide-scrollbar space-x-4 pb-4">
+                <!-- 推荐卡片1 -->
+                <div class="music-card flex-shrink-0 w-40">
+                    <div class="h-40 bg-gradient-to-br from-purple-400 to-indigo-600 relative">
+                        <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bXVzaWN8ZW58MHx8MHx8fDA%3D" alt="推荐音乐" class="w-full h-full object-cover">
+                        <div class="absolute bottom-0 left-0 w-full p-3 bg-gradient-to-t from-black to-transparent text-white">
+                            <h4 class="font-bold">今日热门</h4>
+                            <p class="text-xs text-gray-300">根据你的口味推荐</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 推荐卡片2 -->
+                <div class="music-card flex-shrink-0 w-40">
+                    <div class="h-40 bg-gradient-to-br from-red-400 to-pink-600 relative">
+                        <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bXVzaWN8ZW58MHx8MHx8fDA%3D" alt="新发行" class="w-full h-full object-cover">
+                        <div class="absolute bottom-0 left-0 w-full p-3 bg-gradient-to-t from-black to-transparent text-white">
+                            <h4 class="font-bold">新歌速递</h4>
+                            <p class="text-xs text-gray-300">最新发行的热门单曲</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 推荐卡片3 -->
+                <div class="music-card flex-shrink-0 w-40">
+                    <div class="h-40 bg-gradient-to-br from-yellow-400 to-orange-600 relative">
+                        <img src="https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fG11c2ljfGVufDB8fDB8fHww" alt="心情播放列表" class="w-full h-full object-cover">
+                        <div class="absolute bottom-0 left-0 w-full p-3 bg-gradient-to-t from-black to-transparent text-white">
+                            <h4 class="font-bold">心情良好</h4>
+                            <p class="text-xs text-gray-300">提升你的心情</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 推荐卡片4 -->
+                <div class="music-card flex-shrink-0 w-40">
+                    <div class="h-40 bg-gradient-to-br from-green-400 to-teal-600 relative">
+                        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fG11c2ljfGVufDB8fDB8fHww" alt="放松音乐" class="w-full h-full object-cover">
+                        <div class="absolute bottom-0 left-0 w-full p-3 bg-gradient-to-t from-black to-transparent text-white">
+                            <h4 class="font-bold">放松时光</h4>
+                            <p class="text-xs text-gray-300">轻松愉快的旋律</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 热门歌单 -->
+        <div class="mb-8">
+            <div class="flex justify-between items-center mb-4">
+                <h3 class="text-lg font-bold">热门歌单</h3>
+                <span class="text-purple-600 text-sm">查看全部</span>
+            </div>
+            <div class="grid grid-cols-2 gap-4">
+                <!-- 歌单1 -->
+                <div class="music-card">
+                    <div class="aspect-square bg-gray-100 rounded-lg relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8bXVzaWN8ZW58MHx8MHx8fDA%3D" alt="华语经典" class="w-full h-full object-cover">
+                        <div class="absolute bottom-0 left-0 w-full p-3 bg-gradient-to-t from-black to-transparent text-white">
+                            <h4 class="font-bold text-sm">华语经典</h4>
+                            <p class="text-xs text-gray-300">120首歌</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 歌单2 -->
+                <div class="music-card">
+                    <div class="aspect-square bg-gray-100 rounded-lg relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1485579149621-3123dd979885?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fG11c2ljfGVufDB8fDB8fHww" alt="流行热歌" class="w-full h-full object-cover">
+                        <div class="absolute bottom-0 left-0 w-full p-3 bg-gradient-to-t from-black to-transparent text-white">
+                            <h4 class="font-bold text-sm">流行热歌</h4>
+                            <p class="text-xs text-gray-300">98首歌</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 歌单3 -->
+                <div class="music-card">
+                    <div class="aspect-square bg-gray-100 rounded-lg relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bXVzaWN8ZW58MHx8MHx8fDA%3D" alt="嘻哈说唱" class="w-full h-full object-cover">
+                        <div class="absolute bottom-0 left-0 w-full p-3 bg-gradient-to-t from-black to-transparent text-white">
+                            <h4 class="font-bold text-sm">嘻哈说唱</h4>
+                            <p class="text-xs text-gray-300">76首歌</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 歌单4 -->
+                <div class="music-card">
+                    <div class="aspect-square bg-gray-100 rounded-lg relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1506157786151-b8491531f063?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjZ8fG11c2ljfGVufDB8fDB8fHww" alt="独立民谣" class="w-full h-full object-cover">
+                        <div class="absolute bottom-0 left-0 w-full p-3 bg-gradient-to-t from-black to-transparent text-white">
+                            <h4 class="font-bold text-sm">独立民谣</h4>
+                            <p class="text-xs text-gray-300">135首歌</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 最近播放 -->
+        <div class="mb-8">
+            <h3 class="text-lg font-bold mb-4">最近播放</h3>
+            <div class="space-y-4">
+                <!-- 歌曲1 -->
+                <div class="flex items-center space-x-3">
+                    <div class="w-12 h-12 bg-gray-100 rounded-md overflow-hidden flex-shrink-0">
+                        <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bXVzaWN8ZW58MHx8MHx8fDA%3D" alt="夜曲" class="w-full h-full object-cover">
+                    </div>
+                    <div class="flex-1">
+                        <h4 class="font-medium">夜曲</h4>
+                        <p class="text-sm text-gray-500">周杰伦</p>
+                    </div>
+                    <button class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-700">
+                        <i class="fas fa-play text-sm"></i>
+                    </button>
+                </div>
+                
+                <!-- 歌曲2 -->
+                <div class="flex items-center space-x-3">
+                    <div class="w-12 h-12 bg-gray-100 rounded-md overflow-hidden flex-shrink-0">
+                        <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bXVzaWN8ZW58MHx8MHx8fDA%3D" alt="浮夸" class="w-full h-full object-cover">
+                    </div>
+                    <div class="flex-1">
+                        <h4 class="font-medium">浮夸</h4>
+                        <p class="text-sm text-gray-500">陈奕迅</p>
+                    </div>
+                    <button class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-700">
+                        <i class="fas fa-play text-sm"></i>
+                    </button>
+                </div>
+                
+                <!-- 歌曲3 -->
+                <div class="flex items-center space-x-3">
+                    <div class="w-12 h-12 bg-gray-100 rounded-md overflow-hidden flex-shrink-0">
+                        <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bXVzaWN8ZW58MHx8MHx8fDA%3D" alt="海阔天空" class="w-full h-full object-cover">
+                    </div>
+                    <div class="flex-1">
+                        <h4 class="font-medium">海阔天空</h4>
+                        <p class="text-sm text-gray-500">Beyond</p>
+                    </div>
+                    <button class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-700">
+                        <i class="fas fa-play text-sm"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 迷你播放器 -->
+    <div class="mini-player flex items-center justify-between px-4">
+        <div class="flex items-center space-x-3">
+            <div class="w-10 h-10 bg-gray-100 rounded overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bXVzaWN8ZW58MHx8MHx8fDA%3D" alt="当前播放" class="w-full h-full object-cover">
+            </div>
+            <div>
+                <h4 class="font-medium text-sm">夜曲</h4>
+                <p class="text-xs text-gray-500">周杰伦</p>
+            </div>
+        </div>
+        <div class="flex items-center space-x-4">
+            <button class="play-btn w-8 h-8 rounded-full bg-purple-600 flex items-center justify-center text-white">
+                <i class="fas fa-play text-xs"></i>
+            </button>
+            <button>
+                <i class="fas fa-step-forward text-gray-600"></i>
+            </button>
+        </div>
+    </div>
+    
+    <!-- 底部导航 -->
+    <div class="bottom-nav flex justify-around items-center pt-2">
+        <a href="#" class="nav-item flex flex-col items-center active" data-page="home">
+            <i class="fas fa-home text-lg text-purple-600"></i>
+            <span class="text-xs mt-1 text-purple-600">首页</span>
+        </a>
+        <a href="#" class="nav-item flex flex-col items-center" data-page="search">
+            <i class="fas fa-search text-lg text-gray-400"></i>
+            <span class="text-xs mt-1 text-gray-400">搜索</span>
+        </a>
+        <a href="#" class="nav-item flex flex-col items-center" data-page="library">
+            <i class="fas fa-book text-lg text-gray-400"></i>
+            <span class="text-xs mt-1 text-gray-400">资料库</span>
+        </a>
+        <a href="#" class="nav-item flex flex-col items-center" data-page="profile">
+            <i class="fas fa-user text-lg text-gray-400"></i>
+            <span class="text-xs mt-1 text-gray-400">我的</span>
+        </a>
+        <a href="#" class="nav-item flex flex-col items-center" data-page="settings">
+            <i class="fas fa-cog text-lg text-gray-400"></i>
+            <span class="text-xs mt-1 text-gray-400">设置</span>
+        </a>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html> 

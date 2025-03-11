@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>设置 - 音乐App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-gray-50 text-gray-900">
+    <!-- 状态栏 -->
+    <div class="status-bar flex justify-between items-center">
+        <span class="status-time">9:41</span>
+        <div class="status-icons flex space-x-1">
+            <i class="fas fa-signal"></i>
+            <i class="fas fa-wifi"></i>
+            <i class="fas fa-battery-full"></i>
+        </div>
+    </div>
+
+    <!-- 内容区域 -->
+    <div class="content-area hide-scrollbar pb-20">
+        <!-- 标题 -->
+        <div class="px-4 py-2">
+            <h1 class="text-2xl font-bold">设置</h1>
+        </div>
+
+        <!-- 用户信息卡片 -->
+        <div class="bg-white rounded-xl mx-4 p-4 mb-6 shadow-sm">
+            <div class="flex items-center">
+                <div class="w-16 h-16 rounded-full overflow-hidden mr-4">
+                    <img src="https://images.unsplash.com/photo-1531384441138-2736e62e0919?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHBvcnRyYWl0fGVufDB8fDB8fHww" alt="用户头像" class="w-full h-full object-cover">
+                </div>
+                <div>
+                    <h2 class="text-lg font-bold">小明</h2>
+                    <p class="text-sm text-gray-500">@xiaoming</p>
+                </div>
+                <div class="ml-auto">
+                    <button class="text-gray-400">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 账号设置 -->
+        <div class="bg-white rounded-xl mx-4 mb-6 shadow-sm">
+            <h2 class="px-4 pt-3 pb-1 text-sm font-medium text-gray-500 uppercase">账号</h2>
+            
+            <div class="divide-y divide-gray-100">
+                <div class="flex justify-between items-center p-4">
+                    <div class="flex items-center">
+                        <div class="w-8 h-8 rounded-full bg-purple-100 flex items-center justify-center mr-3">
+                            <i class="fas fa-user-circle text-purple-600"></i>
+                        </div>
+                        <span>个人资料</span>
+                    </div>
+                    <i class="fas fa-chevron-right text-gray-400"></i>
+                </div>
+                
+                <div class="flex justify-between items-center p-4">
+                    <div class="flex items-center">
+                        <div class="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center mr-3">
+                            <i class="fas fa-envelope text-green-600"></i>
+                        </div>
+                        <span>邮箱与安全</span>
+                    </div>
+                    <i class="fas fa-chevron-right text-gray-400"></i>
+                </div>
+                
+                <div class="flex justify-between items-center p-4">
+                    <div class="flex items-center">
+                        <div class="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center mr-3">
+                            <i class="fas fa-bell text-blue-600"></i>
+                        </div>
+                        <span>通知设置</span>
+                    </div>
+                    <i class="fas fa-chevron-right text-gray-400"></i>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 播放设置 -->
+        <div class="bg-white rounded-xl mx-4 mb-6 shadow-sm">
+            <h2 class="px-4 pt-3 pb-1 text-sm font-medium text-gray-500 uppercase">播放</h2>
+            
+            <div class="divide-y divide-gray-100">
+                <div class="flex justify-between items-center p-4">
+                    <div class="flex items-center">
+                        <div class="w-8 h-8 rounded-full bg-red-100 flex items-center justify-center mr-3">
+                            <i class="fas fa-sliders-h text-red-600"></i>
+                        </div>
+                        <span>音频质量</span>
+                    </div>
+                    <div class="text-sm text-gray-500">高清</div>
+                </div>
+                
+                <div class="flex justify-between items-center p-4">
+                    <div class="flex items-center">
+                        <div class="w-8 h-8 rounded-full bg-yellow-100 flex items-center justify-center mr-3">
+                            <i class="fas fa-volume-up text-yellow-600"></i>
+                        </div>
+                        <span>均衡器</span>
+                    </div>
+                    <i class="fas fa-chevron-right text-gray-400"></i>
+                </div>
+                
+                <div class="flex justify-between items-center p-4">
+                    <div class="flex items-center">
+                        <div class="w-8 h-8 rounded-full bg-pink-100 flex items-center justify-center mr-3">
+                            <i class="fas fa-random text-pink-600"></i>
+                        </div>
+                        <span>自动播放</span>
+                    </div>
+                    <div class="relative inline-block w-10 align-middle select-none transition duration-200 ease-in">
+                        <input type="checkbox" name="autoplay" id="autoplay" class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 border-gray-300 appearance-none cursor-pointer checked:right-0 checked:border-purple-600"/>
+                        <label for="autoplay" class="toggle-label block overflow-hidden h-6 rounded-full bg-gray-300 cursor-pointer"></label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 下载设置 -->
+        <div class="bg-white rounded-xl mx-4 mb-6 shadow-sm">
+            <h2 class="px-4 pt-3 pb-1 text-sm font-medium text-gray-500 uppercase">下载</h2>
+            
+            <div class="divide-y divide-gray-100">
+                <div class="flex justify-between items-center p-4">
+                    <div class="flex items-center">
+                        <div class="w-8 h-8 rounded-full bg-indigo-100 flex items-center justify-center mr-3">
+                            <i class="fas fa-download text-indigo-600"></i>
+                        </div>
+                        <span>下载质量</span>
+                    </div>
+                    <div class="text-sm text-gray-500">标准</div>
+                </div>
+                
+                <div class="flex justify-between items-center p-4">
+                    <div class="flex items-center">
+                        <div class="w-8 h-8 rounded-full bg-teal-100 flex items-center justify-center mr-3">
+                            <i class="fas fa-wifi text-teal-600"></i>
+                        </div>
+                        <span>仅WiFi下载</span>
+                    </div>
+                    <div class="relative inline-block w-10 align-middle select-none transition duration-200 ease-in">
+                        <input type="checkbox" name="wifionly" id="wifionly" class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 border-purple-600 appearance-none cursor-pointer checked:right-0" checked/>
+                        <label for="wifionly" class="toggle-label block overflow-hidden h-6 rounded-full bg-purple-300 cursor-pointer"></label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 关于与支持 -->
+        <div class="bg-white rounded-xl mx-4 mb-6 shadow-sm">
+            <h2 class="px-4 pt-3 pb-1 text-sm font-medium text-gray-500 uppercase">关于与支持</h2>
+            
+            <div class="divide-y divide-gray-100">
+                <div class="flex justify-between items-center p-4">
+                    <div class="flex items-center">
+                        <div class="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center mr-3">
+                            <i class="fas fa-info-circle text-gray-600"></i>
+                        </div>
+                        <span>关于我们</span>
+                    </div>
+                    <i class="fas fa-chevron-right text-gray-400"></i>
+                </div>
+                
+                <div class="flex justify-between items-center p-4">
+                    <div class="flex items-center">
+                        <div class="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center mr-3">
+                            <i class="fas fa-question-circle text-gray-600"></i>
+                        </div>
+                        <span>帮助与反馈</span>
+                    </div>
+                    <i class="fas fa-chevron-right text-gray-400"></i>
+                </div>
+                
+                <div class="flex justify-between items-center p-4">
+                    <div class="flex items-center">
+                        <div class="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center mr-3">
+                            <i class="fas fa-shield-alt text-gray-600"></i>
+                        </div>
+                        <span>隐私政策</span>
+                    </div>
+                    <i class="fas fa-chevron-right text-gray-400"></i>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 退出登录 -->
+        <div class="px-4 mb-8">
+            <button class="w-full py-3 bg-white text-red-500 rounded-xl shadow-sm font-medium">
+                退出登录
+            </button>
+        </div>
+        
+        <!-- 版本信息 -->
+        <div class="text-center text-sm text-gray-500 mb-20">
+            <p>版本 v1.0.1 (202207)</p>
+            <p class="mt-1">© 2023 音乐App团队</p>
+        </div>
+    </div>
+    
+    <!-- 迷你播放器 -->
+    <div class="mini-player flex items-center justify-between px-4">
+        <div class="flex items-center space-x-3">
+            <div class="w-10 h-10 bg-gray-100 rounded overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bXVzaWN8ZW58MHx8MHx8fDA%3D" alt="当前播放" class="w-full h-full object-cover">
+            </div>
+            <div>
+                <h4 class="font-medium text-sm">夜曲</h4>
+                <p class="text-xs text-gray-500">周杰伦</p>
+            </div>
+        </div>
+        <div class="flex items-center space-x-4">
+            <button class="play-btn w-8 h-8 rounded-full bg-purple-600 flex items-center justify-center text-white">
+                <i class="fas fa-play text-xs"></i>
+            </button>
+            <button>
+                <i class="fas fa-step-forward text-gray-600"></i>
+            </button>
+        </div>
+    </div>
+    
+    <!-- 底部导航 -->
+    <div class="bottom-nav flex justify-around items-center pt-2">
+        <a href="#" class="nav-item flex flex-col items-center" data-page="home">
+            <i class="fas fa-home text-lg text-gray-400"></i>
+            <span class="text-xs mt-1 text-gray-400">首页</span>
+        </a>
+        <a href="#" class="nav-item flex flex-col items-center" data-page="search">
+            <i class="fas fa-search text-lg text-gray-400"></i>
+            <span class="text-xs mt-1 text-gray-400">搜索</span>
+        </a>
+        <a href="#" class="nav-item flex flex-col items-center" data-page="library">
+            <i class="fas fa-book text-lg text-gray-400"></i>
+            <span class="text-xs mt-1 text-gray-400">资料库</span>
+        </a>
+        <a href="#" class="nav-item flex flex-col items-center" data-page="profile">
+            <i class="fas fa-user text-lg text-gray-400"></i>
+            <span class="text-xs mt-1 text-gray-400">我的</span>
+        </a>
+        <a href="#" class="nav-item flex flex-col items-center active" data-page="settings">
+            <i class="fas fa-cog text-lg text-purple-600"></i>
+            <span class="text-xs mt-1 text-purple-600">设置</span>
+        </a>
+    </div>
+
+    <!-- 自定义样式 -->
+    <style>
+        .toggle-checkbox:checked {
+            right: 0;
+            border-color: #7e3af2;
+        }
+        .toggle-checkbox:checked + .toggle-label {
+            background-color: #d8b4fe;
+        }
+    </style>
+
+    <script src="js/app.js"></script>
+</body>
+</html> 

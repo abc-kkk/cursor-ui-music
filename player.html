@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>播放 - 音乐App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* 播放页面特殊样式覆盖 */
+        .content-area {
+            padding-bottom: 20px; /* 覆盖默认的148px，不需要为底部导航留空间 */
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-b from-purple-900 to-purple-800 text-white">
+    <!-- 状态栏 - 深色 -->
+    <div class="status-bar dark flex justify-between items-center">
+        <span class="status-time">9:41</span>
+        <div class="status-icons flex space-x-1">
+            <i class="fas fa-signal"></i>
+            <i class="fas fa-wifi"></i>
+            <i class="fas fa-battery-full"></i>
+        </div>
+    </div>
+
+    <!-- 播放器容器 -->
+    <div class="content-area hide-scrollbar flex flex-col px-4 pb-8">
+        <!-- 顶部控制 -->
+        <div class="flex justify-between items-center mt-2 mb-8">
+            <button class="w-10 h-10 rounded-full bg-white bg-opacity-20 flex items-center justify-center">
+                <i class="fas fa-chevron-down"></i>
+            </button>
+            <div>
+                <h2 class="text-center text-sm font-medium opacity-80">正在播放</h2>
+                <p class="text-center text-xs opacity-60">来自：周杰伦 - 热门单曲</p>
+            </div>
+            <button class="w-10 h-10 rounded-full bg-white bg-opacity-20 flex items-center justify-center">
+                <i class="fas fa-ellipsis-v"></i>
+            </button>
+        </div>
+
+        <!-- 专辑封面 -->
+        <div class="mb-10">
+            <div class="aspect-square rounded-lg shadow-2xl overflow-hidden mx-auto max-w-xs animate-pulse">
+                <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bXVzaWN8ZW58MHx8MHx8fDA%3D" alt="专辑封面" class="w-full h-full object-cover">
+            </div>
+        </div>
+
+        <!-- 歌曲信息 -->
+        <div class="mb-8 text-center">
+            <h1 class="text-2xl font-bold mb-2 song-title">夜曲</h1>
+            <p class="text-base opacity-80 artist-name">周杰伦</p>
+        </div>
+
+        <!-- 进度条 -->
+        <div class="mb-5">
+            <div class="player-progress-bar bg-white bg-opacity-20 h-1 rounded-full mb-2">
+                <div class="player-progress bg-white h-full rounded-full" style="width: 35%"></div>
+            </div>
+            <div class="flex justify-between items-center text-sm opacity-70">
+                <span class="time-elapsed">1:13</span>
+                <span>3:30</span>
+            </div>
+        </div>
+
+        <!-- 播放控制 -->
+        <div class="flex justify-center items-center space-x-8 mb-10">
+            <button class="player-shuffle-btn text-2xl opacity-70">
+                <i class="fas fa-random"></i>
+            </button>
+            <button class="player-prev-btn text-2xl">
+                <i class="fas fa-step-backward"></i>
+            </button>
+            <button class="player-play-btn w-16 h-16 rounded-full bg-white text-purple-900 flex items-center justify-center text-2xl">
+                <i class="fas fa-pause"></i>
+            </button>
+            <button class="player-next-btn text-2xl">
+                <i class="fas fa-step-forward"></i>
+            </button>
+            <button class="player-repeat-btn text-2xl opacity-70">
+                <i class="fas fa-redo"></i>
+            </button>
+        </div>
+
+        <!-- 歌词展示 -->
+        <div class="lyrics-container text-center mb-6">
+            <p class="text-white opacity-70 mb-2">你听见 风声了吗</p>
+            <p class="text-white font-medium mb-2">风声吹动树叶飘动就像我的心</p>
+            <p class="text-white opacity-70 mb-2">动着摇着</p>
+        </div>
+
+        <!-- 额外控制 -->
+        <div class="flex justify-between items-center mb-4">
+            <button class="flex flex-col items-center">
+                <i class="fas fa-volume-up opacity-70 mb-1"></i>
+                <span class="text-xs opacity-70">音量</span>
+            </button>
+            <button class="player-like-btn flex flex-col items-center">
+                <i class="far fa-heart opacity-70 mb-1"></i>
+                <span class="text-xs opacity-70">喜欢</span>
+            </button>
+            <button class="flex flex-col items-center">
+                <i class="fas fa-align-left opacity-70 mb-1"></i>
+                <span class="text-xs opacity-70">歌词</span>
+            </button>
+            <button class="flex flex-col items-center">
+                <i class="fas fa-share-alt opacity-70 mb-1"></i>
+                <span class="text-xs opacity-70">分享</span>
+            </button>
+        </div>
+        
+        <!-- 音频质量 -->
+        <div class="flex items-center justify-center text-xs opacity-60 mb-2">
+            <i class="fas fa-crown mr-1"></i>
+            <span>高清音质 | 无损 FLAC</span>
+        </div>
+        
+        <!-- 波形动画 -->
+        <div class="wave-animation mx-auto mb-4">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+    <script src="js/player.js"></script>
+</body>
+</html> 

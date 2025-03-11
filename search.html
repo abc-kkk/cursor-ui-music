@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>搜索 - 音乐App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-white text-gray-900">
+    <!-- 状态栏 -->
+    <div class="status-bar flex justify-between items-center">
+        <span class="status-time">9:41</span>
+        <div class="status-icons flex space-x-1">
+            <i class="fas fa-signal"></i>
+            <i class="fas fa-wifi"></i>
+            <i class="fas fa-battery-full"></i>
+        </div>
+    </div>
+
+    <!-- 内容区域 -->
+    <div class="content-area hide-scrollbar px-4">
+        <!-- 搜索框 -->
+        <div class="flex items-center space-x-3 mt-4 mb-6">
+            <div class="relative flex-1">
+                <input type="text" placeholder="搜索歌曲、艺术家或专辑" class="w-full py-3 pl-10 pr-4 bg-gray-100 rounded-full text-sm focus:outline-none">
+                <i class="fas fa-search absolute left-4 top-3.5 text-gray-400"></i>
+            </div>
+            <button class="text-gray-500">取消</button>
+        </div>
+
+        <!-- 热门搜索 -->
+        <div class="mb-8">
+            <h3 class="text-lg font-bold mb-4">热门搜索</h3>
+            <div class="flex flex-wrap gap-2">
+                <span class="px-4 py-2 bg-gray-100 rounded-full text-sm">周杰伦</span>
+                <span class="px-4 py-2 bg-gray-100 rounded-full text-sm">陈奕迅</span>
+                <span class="px-4 py-2 bg-gray-100 rounded-full text-sm">林俊杰</span>
+                <span class="px-4 py-2 bg-gray-100 rounded-full text-sm">Taylor Swift</span>
+                <span class="px-4 py-2 bg-gray-100 rounded-full text-sm">华语流行</span>
+                <span class="px-4 py-2 bg-gray-100 rounded-full text-sm">热门说唱</span>
+                <span class="px-4 py-2 bg-gray-100 rounded-full text-sm">抖音热歌</span>
+                <span class="px-4 py-2 bg-gray-100 rounded-full text-sm">独立民谣</span>
+                <span class="px-4 py-2 bg-gray-100 rounded-full text-sm">粤语经典</span>
+            </div>
+        </div>
+
+        <!-- 搜索历史 -->
+        <div class="mb-8">
+            <div class="flex justify-between items-center mb-4">
+                <h3 class="text-lg font-bold">搜索历史</h3>
+                <button class="text-sm text-gray-500">
+                    <i class="fas fa-trash-alt"></i> 清除
+                </button>
+            </div>
+            <div class="space-y-4">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center space-x-3">
+                        <i class="fas fa-history text-gray-400"></i>
+                        <span>夜曲 周杰伦</span>
+                    </div>
+                    <button class="text-gray-400">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center space-x-3">
+                        <i class="fas fa-history text-gray-400"></i>
+                        <span>陈奕迅</span>
+                    </div>
+                    <button class="text-gray-400">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center space-x-3">
+                        <i class="fas fa-history text-gray-400"></i>
+                        <span>Beyond 海阔天空</span>
+                    </div>
+                    <button class="text-gray-400">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 推荐艺术家 -->
+        <div class="mb-8">
+            <h3 class="text-lg font-bold mb-4">推荐艺术家</h3>
+            <div class="grid grid-cols-4 gap-4">
+                <div class="text-center">
+                    <div class="w-16 h-16 mx-auto rounded-full overflow-hidden mb-2">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDF8fHBvcnRyYWl0fGVufDB8fDB8fHww" alt="周杰伦" class="w-full h-full object-cover">
+                    </div>
+                    <p class="text-sm truncate">周杰伦</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 mx-auto rounded-full overflow-hidden mb-2">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cG9ydHJhaXR8ZW58MHx8MHx8fDA%3D" alt="Taylor Swift" class="w-full h-full object-cover">
+                    </div>
+                    <p class="text-sm truncate">Taylor Swift</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 mx-auto rounded-full overflow-hidden mb-2">
+                        <img src="https://images.unsplash.com/photo-1531384441138-2736e62e0919?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHBvcnRyYWl0fGVufDB8fDB8fHww" alt="陈奕迅" class="w-full h-full object-cover">
+                    </div>
+                    <p class="text-sm truncate">陈奕迅</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 mx-auto rounded-full overflow-hidden mb-2">
+                        <img src="https://images.unsplash.com/photo-1552374196-c4e7ffc6e126?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzJ8fHBvcnRyYWl0fGVufDB8fDB8fHww" alt="林俊杰" class="w-full h-full object-cover">
+                    </div>
+                    <p class="text-sm truncate">林俊杰</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 热门类别 -->
+        <div class="mb-10">
+            <h3 class="text-lg font-bold mb-4">热门分类</h3>
+            <div class="grid grid-cols-2 gap-4">
+                <div class="bg-gradient-to-r from-purple-500 to-indigo-600 h-24 rounded-lg flex items-center justify-center text-white font-bold relative overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1499415479124-43c32433a620?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzB8fG11c2ljfGVufDB8fDB8fHww" alt="流行" class="absolute inset-0 w-full h-full object-cover opacity-40">
+                    <span class="z-10">流行</span>
+                </div>
+                <div class="bg-gradient-to-r from-red-500 to-pink-600 h-24 rounded-lg flex items-center justify-center text-white font-bold relative overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1501386761578-eac5c94b800a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fG11c2ljfGVufDB8fDB8fHww" alt="摇滚" class="absolute inset-0 w-full h-full object-cover opacity-40">
+                    <span class="z-10">摇滚</span>
+                </div>
+                <div class="bg-gradient-to-r from-yellow-500 to-orange-600 h-24 rounded-lg flex items-center justify-center text-white font-bold relative overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8bXVzaWN8ZW58MHx8MHx8fDA%3D" alt="嘻哈" class="absolute inset-0 w-full h-full object-cover opacity-40">
+                    <span class="z-10">嘻哈</span>
+                </div>
+                <div class="bg-gradient-to-r from-green-500 to-teal-600 h-24 rounded-lg flex items-center justify-center text-white font-bold relative overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bXVzaWN8ZW58MHx8MHx8fDA%3D" alt="电子" class="absolute inset-0 w-full h-full object-cover opacity-40">
+                    <span class="z-10">电子</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 迷你播放器 -->
+    <div class="mini-player flex items-center justify-between px-4">
+        <div class="flex items-center space-x-3">
+            <div class="w-10 h-10 bg-gray-100 rounded overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bXVzaWN8ZW58MHx8MHx8fDA%3D" alt="当前播放" class="w-full h-full object-cover">
+            </div>
+            <div>
+                <h4 class="font-medium text-sm">夜曲</h4>
+                <p class="text-xs text-gray-500">周杰伦</p>
+            </div>
+        </div>
+        <div class="flex items-center space-x-4">
+            <button class="play-btn w-8 h-8 rounded-full bg-purple-600 flex items-center justify-center text-white">
+                <i class="fas fa-play text-xs"></i>
+            </button>
+            <button>
+                <i class="fas fa-step-forward text-gray-600"></i>
+            </button>
+        </div>
+    </div>
+    
+    <!-- 底部导航 -->
+    <div class="bottom-nav flex justify-around items-center pt-2">
+        <a href="#" class="nav-item flex flex-col items-center" data-page="home">
+            <i class="fas fa-home text-lg text-gray-400"></i>
+            <span class="text-xs mt-1 text-gray-400">首页</span>
+        </a>
+        <a href="#" class="nav-item flex flex-col items-center active" data-page="search">
+            <i class="fas fa-search text-lg text-purple-600"></i>
+            <span class="text-xs mt-1 text-purple-600">搜索</span>
+        </a>
+        <a href="#" class="nav-item flex flex-col items-center" data-page="library">
+            <i class="fas fa-book text-lg text-gray-400"></i>
+            <span class="text-xs mt-1 text-gray-400">资料库</span>
+        </a>
+        <a href="#" class="nav-item flex flex-col items-center" data-page="profile">
+            <i class="fas fa-user text-lg text-gray-400"></i>
+            <span class="text-xs mt-1 text-gray-400">我的</span>
+        </a>
+        <a href="#" class="nav-item flex flex-col items-center" data-page="settings">
+            <i class="fas fa-cog text-lg text-gray-400"></i>
+            <span class="text-xs mt-1 text-gray-400">设置</span>
+        </a>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html> 

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>音乐App界面展示</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            background-color: #f5f5f7;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+        .phone-container {
+            width: 393px;
+            height: 852px;
+            background-color: white;
+            border-radius: 44px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            position: relative;
+        }
+        .phone-frame {
+            padding: 12px;
+            height: 100%;
+        }
+        .screen {
+            width: 100%;
+            height: 100%;
+            border-radius: 36px;
+            overflow: hidden;
+            background-color: black;
+        }
+        iframe {
+            border: none;
+            width: 100%;
+            height: 100%;
+        }
+        .notch {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 160px;
+            height: 34px;
+            background-color: black;
+            border-bottom-left-radius: 18px;
+            border-bottom-right-radius: 18px;
+            z-index: 10;
+        }
+        h2 {
+            margin-bottom: 20px;
+            color: #333;
+            font-weight: 600;
+        }
+        .frame-container {
+            margin-bottom: 60px;
+        }
+    </style>
+</head>
+<body class="p-8">
+    <h1 class="text-3xl font-bold mb-8 text-center">音乐App原型界面</h1>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16">
+        <!-- 首页 -->
+        <div class="frame-container">
+            <h2 class="text-xl">首页/发现</h2>
+            <div class="phone-container mx-auto">
+                <div class="notch"></div>
+                <div class="phone-frame">
+                    <div class="screen">
+                        <iframe src="home.html" title="首页"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 搜索页 -->
+        <div class="frame-container">
+            <h2 class="text-xl">搜索</h2>
+            <div class="phone-container mx-auto">
+                <div class="notch"></div>
+                <div class="phone-frame">
+                    <div class="screen">
+                        <iframe src="search.html" title="搜索"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 资料库 -->
+        <div class="frame-container">
+            <h2 class="text-xl">资料库</h2>
+            <div class="phone-container mx-auto">
+                <div class="notch"></div>
+                <div class="phone-frame">
+                    <div class="screen">
+                        <iframe src="library.html" title="资料库"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 播放页面 -->
+        <div class="frame-container">
+            <h2 class="text-xl">正在播放</h2>
+            <div class="phone-container mx-auto">
+                <div class="notch"></div>
+                <div class="phone-frame">
+                    <div class="screen">
+                        <iframe src="player.html" title="播放"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 个人主页 -->
+        <div class="frame-container">
+            <h2 class="text-xl">个人主页</h2>
+            <div class="phone-container mx-auto">
+                <div class="notch"></div>
+                <div class="phone-frame">
+                    <div class="screen">
+                        <iframe src="profile.html" title="个人主页"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 设置 -->
+        <div class="frame-container">
+            <h2 class="text-xl">设置</h2>
+            <div class="phone-container mx-auto">
+                <div class="notch"></div>
+                <div class="phone-frame">
+                    <div class="screen">
+                        <iframe src="settings.html" title="设置"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 

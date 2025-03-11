@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人主页 - 音乐App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-white text-gray-900">
+    <!-- 状态栏 -->
+    <div class="status-bar flex justify-between items-center">
+        <span class="status-time">9:41</span>
+        <div class="status-icons flex space-x-1">
+            <i class="fas fa-signal"></i>
+            <i class="fas fa-wifi"></i>
+            <i class="fas fa-battery-full"></i>
+        </div>
+    </div>
+
+    <!-- 内容区域 -->
+    <div class="content-area hide-scrollbar">
+        <!-- 用户信息头部 -->
+        <div class="relative">
+            <!-- 背景图片 -->
+            <div class="h-40 bg-gradient-to-r from-purple-500 to-indigo-600 relative">
+                <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bXVzaWN8ZW58MHx8MHx8fDA%3D" alt="个人主页背景" class="w-full h-full object-cover opacity-60">
+            </div>
+            
+            <!-- 用户信息 -->
+            <div class="absolute -bottom-16 w-full px-4">
+                <div class="flex items-end">
+                    <!-- 头像 -->
+                    <div class="w-24 h-24 rounded-full border-4 border-white bg-white overflow-hidden shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1531384441138-2736e62e0919?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHBvcnRyYWl0fGVufDB8fDB8fHww" alt="用户头像" class="w-full h-full object-cover">
+                    </div>
+                    
+                    <!-- 用户名称和简介 -->
+                    <div class="ml-4 mb-2">
+                        <h1 class="text-xl font-bold">小明</h1>
+                        <p class="text-sm text-gray-600">@xiaoming</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 用户数据 -->
+        <div class="mt-20 px-4 mb-8">
+            <div class="flex justify-around">
+                <div class="text-center">
+                    <p class="text-xl font-bold">428</p>
+                    <p class="text-sm text-gray-500">收藏</p>
+                </div>
+                <div class="text-center">
+                    <p class="text-xl font-bold">32</p>
+                    <p class="text-sm text-gray-500">歌单</p>
+                </div>
+                <div class="text-center">
+                    <p class="text-xl font-bold">286</p>
+                    <p class="text-sm text-gray-500">关注</p>
+                </div>
+                <div class="text-center">
+                    <p class="text-xl font-bold">142</p>
+                    <p class="text-sm text-gray-500">粉丝</p>
+                </div>
+            </div>
+            <div class="mt-4 flex">
+                <button class="flex-1 py-2 bg-purple-600 text-white rounded-full text-sm font-medium mr-2">
+                    编辑资料
+                </button>
+                <button class="w-10 h-10 rounded-full border border-gray-300 flex items-center justify-center">
+                    <i class="fas fa-qrcode text-gray-500"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- 收听统计 -->
+        <div class="px-4 mb-8">
+            <h2 class="text-lg font-bold mb-4">收听统计</h2>
+            <div class="bg-gray-50 rounded-xl p-4">
+                <div class="flex justify-between items-center mb-4">
+                    <span class="text-sm font-medium">本周收听时长</span>
+                    <span class="text-lg font-bold text-purple-600">12小时42分钟</span>
+                </div>
+                
+                <!-- 统计图表 -->
+                <div class="h-20 flex items-end justify-between space-x-2 mb-2">
+                    <div class="w-8 bg-purple-600 rounded-t-md" style="height: 30%"></div>
+                    <div class="w-8 bg-purple-500 rounded-t-md" style="height: 45%"></div>
+                    <div class="w-8 bg-purple-400 rounded-t-md" style="height: 60%"></div>
+                    <div class="w-8 bg-purple-500 rounded-t-md" style="height: 40%"></div>
+                    <div class="w-8 bg-purple-600 rounded-t-md" style="height: 75%"></div>
+                    <div class="w-8 bg-purple-700 rounded-t-md" style="height: 90%"></div>
+                    <div class="w-8 bg-purple-800 rounded-t-md" style="height: 65%"></div>
+                </div>
+                
+                <!-- 日期标签 -->
+                <div class="flex justify-between text-xs text-gray-500">
+                    <span>一</span>
+                    <span>二</span>
+                    <span>三</span>
+                    <span>四</span>
+                    <span>五</span>
+                    <span>六</span>
+                    <span>日</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 喜爱的艺术家 -->
+        <div class="px-4 mb-8">
+            <div class="flex justify-between items-center mb-4">
+                <h2 class="text-lg font-bold">喜爱的艺术家</h2>
+                <span class="text-sm text-purple-600">查看全部</span>
+            </div>
+            
+            <div class="flex overflow-x-auto hide-scrollbar space-x-4 pb-4">
+                <!-- 艺术家 1 -->
+                <div class="flex-shrink-0 w-16 text-center">
+                    <div class="w-16 h-16 rounded-full overflow-hidden mb-1">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDF8fHBvcnRyYWl0fGVufDB8fDB8fHww" alt="周杰伦" class="w-full h-full object-cover">
+                    </div>
+                    <p class="text-xs">周杰伦</p>
+                </div>
+                
+                <!-- 艺术家 2 -->
+                <div class="flex-shrink-0 w-16 text-center">
+                    <div class="w-16 h-16 rounded-full overflow-hidden mb-1">
+                        <img src="https://images.unsplash.com/photo-1531384441138-2736e62e0919?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHBvcnRyYWl0fGVufDB8fDB8fHww" alt="陈奕迅" class="w-full h-full object-cover">
+                    </div>
+                    <p class="text-xs">陈奕迅</p>
+                </div>
+                
+                <!-- 艺术家 3 -->
+                <div class="flex-shrink-0 w-16 text-center">
+                    <div class="w-16 h-16 rounded-full overflow-hidden mb-1">
+                        <img src="https://images.unsplash.com/photo-1552374196-c4e7ffc6e126?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzJ8fHBvcnRyYWl0fGVufDB8fDB8fHww" alt="林俊杰" class="w-full h-full object-cover">
+                    </div>
+                    <p class="text-xs">林俊杰</p>
+                </div>
+                
+                <!-- 艺术家 4 -->
+                <div class="flex-shrink-0 w-16 text-center">
+                    <div class="w-16 h-16 rounded-full overflow-hidden mb-1">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cG9ydHJhaXR8ZW58MHx8MHx8fDA%3D" alt="Taylor Swift" class="w-full h-full object-cover">
+                    </div>
+                    <p class="text-xs">Taylor Swift</p>
+                </div>
+                
+                <!-- 艺术家 5 -->
+                <div class="flex-shrink-0 w-16 text-center">
+                    <div class="w-16 h-16 rounded-full overflow-hidden mb-1">
+                        <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDB8fHBvcnRyYWl0fGVufDB8fDB8fHww" alt="Beyond" class="w-full h-full object-cover">
+                    </div>
+                    <p class="text-xs">Beyond</p>
+                </div>
+                
+                <!-- 艺术家 6 -->
+                <div class="flex-shrink-0 w-16 text-center">
+                    <div class="w-16 h-16 rounded-full overflow-hidden mb-1">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fHBvcnRyYWl0fGVufDB8fDB8fHww" alt="张学友" class="w-full h-full object-cover">
+                    </div>
+                    <p class="text-xs">张学友</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 最近活动 -->
+        <div class="px-4 mb-10">
+            <h2 class="text-lg font-bold mb-4">最近活动</h2>
+            <div class="space-y-4">
+                <!-- 活动 1 -->
+                <div class="bg-gray-50 rounded-xl p-4">
+                    <div class="flex items-start">
+                        <div class="w-10 h-10 rounded-full overflow-hidden mr-3 flex-shrink-0">
+                            <img src="https://images.unsplash.com/photo-1531384441138-2736e62e0919?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHBvcnRyYWl0fGVufDB8fDB8fHww" alt="用户头像" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <div class="text-sm"><span class="font-medium">小明</span> 添加了新歌曲到收藏</div>
+                            <p class="text-xs text-gray-500 mt-1">2分钟前</p>
+                            
+                            <!-- 收藏的歌曲 -->
+                            <div class="flex items-center space-x-3 mt-3 bg-white rounded-lg p-2">
+                                <div class="w-10 h-10 bg-gray-100 rounded overflow-hidden flex-shrink-0">
+                                    <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bXVzaWN8ZW58MHx8MHx8fDA%3D" alt="夜曲" class="w-full h-full object-cover">
+                                </div>
+                                <div class="flex-1">
+                                    <h4 class="text-sm font-medium">夜曲</h4>
+                                    <p class="text-xs text-gray-500">周杰伦</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 活动 2 -->
+                <div class="bg-gray-50 rounded-xl p-4">
+                    <div class="flex items-start">
+                        <div class="w-10 h-10 rounded-full overflow-hidden mr-3 flex-shrink-0">
+                            <img src="https://images.unsplash.com/photo-1531384441138-2736e62e0919?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHBvcnRyYWl0fGVufDB8fDB8fHww" alt="用户头像" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <div class="text-sm"><span class="font-medium">小明</span> 创建了新歌单</div>
+                            <p class="text-xs text-gray-500 mt-1">昨天 14:32</p>
+                            
+                            <!-- 创建的歌单 -->
+                            <div class="flex items-center space-x-3 mt-3 bg-white rounded-lg p-2">
+                                <div class="w-10 h-10 bg-gray-100 rounded overflow-hidden flex-shrink-0">
+                                    <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8bXVzaWN8ZW58MHx8MHx8fDA%3D" alt="我的周末歌单" class="w-full h-full object-cover">
+                                </div>
+                                <div class="flex-1">
+                                    <h4 class="text-sm font-medium">我的周末歌单</h4>
+                                    <p class="text-xs text-gray-500">25首歌</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 迷你播放器 -->
+    <div class="mini-player flex items-center justify-between px-4">
+        <div class="flex items-center space-x-3">
+            <div class="w-10 h-10 bg-gray-100 rounded overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bXVzaWN8ZW58MHx8MHx8fDA%3D" alt="当前播放" class="w-full h-full object-cover">
+            </div>
+            <div>
+                <h4 class="font-medium text-sm">夜曲</h4>
+                <p class="text-xs text-gray-500">周杰伦</p>
+            </div>
+        </div>
+        <div class="flex items-center space-x-4">
+            <button class="play-btn w-8 h-8 rounded-full bg-purple-600 flex items-center justify-center text-white">
+                <i class="fas fa-play text-xs"></i>
+            </button>
+            <button>
+                <i class="fas fa-step-forward text-gray-600"></i>
+            </button>
+        </div>
+    </div>
+    
+    <!-- 底部导航 -->
+    <div class="bottom-nav flex justify-around items-center pt-2">
+        <a href="#" class="nav-item flex flex-col items-center" data-page="home">
+            <i class="fas fa-home text-lg text-gray-400"></i>
+            <span class="text-xs mt-1 text-gray-400">首页</span>
+        </a>
+        <a href="#" class="nav-item flex flex-col items-center" data-page="search">
+            <i class="fas fa-search text-lg text-gray-400"></i>
+            <span class="text-xs mt-1 text-gray-400">搜索</span>
+        </a>
+        <a href="#" class="nav-item flex flex-col items-center" data-page="library">
+            <i class="fas fa-book text-lg text-gray-400"></i>
+            <span class="text-xs mt-1 text-gray-400">资料库</span>
+        </a>
+        <a href="#" class="nav-item flex flex-col items-center active" data-page="profile">
+            <i class="fas fa-user text-lg text-purple-600"></i>
+            <span class="text-xs mt-1 text-purple-600">我的</span>
+        </a>
+        <a href="#" class="nav-item flex flex-col items-center" data-page="settings">
+            <i class="fas fa-cog text-lg text-gray-400"></i>
+            <span class="text-xs mt-1 text-gray-400">设置</span>
+        </a>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html> 
